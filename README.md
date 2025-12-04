@@ -65,14 +65,26 @@ Half Subtractor
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
 1.Half Adder
+```
+module DE3(a,b,sum,carry); 
+input a,b; 
+output sum,carry; 
+assign sum= (a ^ b); 
+assign carry= ( a & b); 
+endmodule 
 
-<img width="1920" height="1080" alt="Screenshot 2025-11-23 211611" src="https://github.com/user-attachments/assets/7bcd0654-361d-4c3d-90bc-af45da9a9e1b" />
-
-
+```
 2.Half Subtractor
 
-<img width="1920" height="1080" alt="Screenshot 2025-11-23 212413" src="https://github.com/user-attachments/assets/d4d9b511-819e-41d2-9666-34b5c2e51b3b" />
+```
+module DE3(a,b,difference,borrow); 
+input a,b; 
+output difference,borrow; 
+assign difference= (a ^ b); 
+assign borrow= ( ~a & b); 
+endmodule 
 
+```
 
 **RTL Schematic**
 
@@ -80,13 +92,13 @@ Half Subtractor
 1.Half Adder
 
 
-<img width="376" height="202" alt="Screenshot 2025-11-23 211716" src="https://github.com/user-attachments/assets/d1c130ea-b2e6-4f48-8690-852d5304de59" />
+![alt text](<LOGICAL DIAGRAM 3.1.png>)
 
 
 2.Half Subtractor
 
 
-<img width="399" height="186" alt="Screenshot 2025-11-23 212153" src="https://github.com/user-attachments/assets/2fc598f7-9505-4366-b47a-8687c7e9dea4" />
+![alt text](<LOGICAL DIAGRAM 3.2.png>)
 
 
 **Output/TIMING Waveform**
@@ -95,13 +107,14 @@ Half Subtractor
 1.Half Adder
 
 
-<img width="1920" height="1080" alt="Screenshot 2025-11-23 212003" src="https://github.com/user-attachments/assets/996046a8-bd7c-48f6-a236-3656529598f4" />
+![alt text](<RTL WAVEFORM 3.1.png>)
 
 
 2.Half Subtractor
 
 
-<img width="1920" height="1080" alt="Screenshot 2025-11-23 212348" src="https://github.com/user-attachments/assets/d9ffaedd-6a57-4713-9fe9-b785c272db18" />
+![alt text](<RTL WAVEFORM 3.2.png>)
+
 
 **Result:**
 
